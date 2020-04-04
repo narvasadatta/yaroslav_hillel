@@ -5,7 +5,7 @@ public class Airplane extends Transport {
     private String airplaneClass;
     private int fuelTankVolume = 2500;      // Одной заправки хватает на 2500 км полета
     private int countOfFuelingStops;
-    private final int stopTime = 6;         // в среднем на заправку и подготовку самолета уходит 6 часов (360 минут)
+    private final int STOPTIME = 6;         // в среднем на заправку и подготовку самолета уходит 6 часов (360 минут)
     private double fuelCosts = 3.0;         // грн. за 1км. в пересчете на одного пассажира
     private double travelCost = findCost();
 
@@ -38,7 +38,7 @@ public class Airplane extends Transport {
 
         } else {
             countOfFuelingStops = Transport.distance / fuelTankVolume;
-            setTotalDowntime(stopTime * countOfFuelingStops);
+            setTotalDowntime(STOPTIME * countOfFuelingStops);
         }
     }
 

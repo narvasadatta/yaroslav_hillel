@@ -4,7 +4,7 @@ public class Train extends Transport {
 
     private String trainClass;
     private int countOfStops;
-    private final double stopTime = 0.25;    // предположем что поеезд делает остановку на 15 минут(0,25 ч.) раз на 200 км.
+    private final double STOPTIME = 0.25;    // предположем что поеезд делает остановку на 15 минут(0,25 ч.) раз на 200 км.
     private double energyCosts = 0.8;        // грн. за 1км. в пересчете на одного пассажира
     private double travelCost = findCost();
 
@@ -29,7 +29,7 @@ public class Train extends Transport {
             setTotalDowntime(0);
         } else {
             countOfStops = distance / 200;
-            setTotalDowntime(countOfStops * stopTime);
+            setTotalDowntime(countOfStops * STOPTIME);
         }
     }
 
